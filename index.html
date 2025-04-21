@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+ <script type="text/javascript">
+    function showToast(message, duration = 3000) {
+      const toast = document.getElementById("toast");
+      const toastMsg = document.getElementById("toast-message");
+      toastMsg.innerText = message;
+      toast.style.display = "block";
+      toast.style.opacity = "1";
+
+      setTimeout(() => {
+        toast.style.transition = "opacity 0.5s ease";
+        toast.style.opacity = "0";
+        setTimeout(() => {
+          toast.style.display = "none";
+        }, 500);
+      }, duration);
+    }
+
+    // Initialize EmailJS
+    (function () {
+      emailjs.init({
+        publicKey: "NcLdMw66z9IL0N_S_",
+      });
+    })();
+
+    window.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        emailjs.sendForm("service_c1ak53e", "template_k8xxrp8", this)
+          .then(() => {
+            showToast("Message sent successfully!");
+            this.reset();
+          }, (error) => {
+            console.error("FAILED...", error);
+            showToast("Something went wrong. Please try again.");
+          });
+      });
+    });
+  </script>
+
+
+
+        <title>Pfano's Portfolio</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">PFANO</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+  <h1 class="home__title">
+    <span class="home__title-color">Pfano Sinyela</span><br>
+    <span id="dynamic-title">Full Stack Developer</span>
+  </h1>
+
+  <a href="assets/img/Pfano Resume.pdf" class="button" target="_blank">View my Resume</a>
+</div>
+
+
+              <div class="home__social">
+                <a href="https://www.linkedin.com/in/sinyela-pfano-408058286/" class="home__social-icon" target="_blank">
+                <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://www.instagram.com/fano.szn/" class="home__social-icon" target="_blank">
+                <i class='bx bxl-instagram'></i>
+                </a>
+                <a href="https://github.com/pfanosinyela03" class="home__social-icon" target="_blank">
+                <i class='bx bxl-github'></i>
+                </a>
+              </div>
+
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      
+                            <image class="home__blob-img" x="50" y="15" href="assets/img/hello.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/me.jpg" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">Hi, I am Pfano Sinyela 👋</h2>
+                        <p class="about__text">
+                         I am a dedicated Full-Stack Developer with a strong passion for crafting high-quality, scalable applications. With proficiency in Kotlin, Java, C#, SQL, HTML/CSS, and various other technologies, I specialize in both front-end and back-end development, enabling me to deliver seamless, efficient solutions across different platforms.
+                         <span class="highlight">Let’s connect — I’m always open to new ideas, collaborations or just chatting about tech!</span>
+</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+<section class="skills section" id="skills">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skills__container bd-grid">
+    <div>
+      <h2 class="skills__subtitle">Professional Skills</h2>
+      <p class="skills__text">I am experienced in a range of modern development tools and languages across mobile, backend, frontend, and cloud platforms.</p>
+
+      <div class="skills__data">
+        <div class="skills__names">
+          <i class='bx bxl-kotlin skills__icon'></i>
+          <span class="skills__name">Kotlin</span>
+        </div>
+      </div>
+
+      <div class="skills__data">
+        <div class="skills__names">
+          <i class='bx bxl-java skills__icon'></i>
+          <span class="skills__name">Java</span>
+        </div>
+      </div>
+
+      <div class="skills__data">
+        <div class="skills__names">
+          <i class='bx bxl-microsoft skills__icon'></i> 
+          <span class="skills__name">C#</span>
+        </div>
+      </div>
+
+      <div class="skills__data">
+        <div class="skills__names">
+          <i class='bx bx-laptop-code skills__icon'></i>
+          <span class="skills__name">Web Development</span>
+        </div>
+      </div>
+
+      <div class="skills__data">
+        <div class="skills__names">
+          <i class='bx bx-cloud skills__icon'></i>
+          <span class="skills__name">Azure DevOps</span>
+        </div>
+      </div>
+
+      <div class="skills__data">
+        <div class="skills__names">
+          <i class='bx bx-data skills__icon'></i>
+          <span class="skills__name">SQL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--===== Projects =====-->
+<section class="work section" id="work">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="work__container bd-grid">
+    <div class="work__card">
+      <div class="work__img">
+  <img src="assets/img/avitrek.png" alt="AviTrek" class="project-img" data-project="avitrek">
+  <span class="img-overlay-text">Tap to view project</span>
+</div>
+	  
+      <a href="assets/apk/AviTrek.apk" class="btn-view-project" download>
+        <i class="fab fa-android"></i> Download APK
+      </a>
+    </div>
+
+    <div class="work__card">
+    <div class="work__img">
+  <img src="assets/img/vinyl.png" alt="Vinyl Collector" class="project-img" data-project="vinyl">
+  <span class="img-overlay-text">Tap to view project</span>
+</div>
+      <a href="assets/apk/VinylVault.apk" class="btn-view-project" download>
+        <i class="fab fa-android"></i> Download APK
+      </a>
+    </div>
+
+    <div class="work__card">
+<div class="work__img">
+  <img src="assets/img/buzz.jpg" alt="BarberBuzz" class="project-img" data-project="buzz">
+  <span class="img-overlay-text">Tap to view project</span>
+</div>
+      <a href="assets/apk/BarberBuzz.apk" class="btn-view-project" download>
+        <i class="fab fa-android"></i> Download APK
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Modal -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3 id="projectTitle"></h3>
+    <p id="projectDescription"></p>
+    <div class="slider-container">
+      <div id="projectImages" class="slider-images">
+        <!-- Images will be dynamically added here -->
+      </div>
+      <button id="prev" class="slider-btn">❮</button>
+      <button id="next" class="slider-btn">❯</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--===== CONTACT =====-->
+<section class="contact section" id="contact">
+  <h2 class="section-title contact__header">Contact Me</h2>
+
+  <div class="contact__container bd-grid">
+    <form id="contact-form" class="contact__form">
+      <input type="text" name="name" placeholder="Your Name" class="contact__input" required>
+      <input type="email" name="email" placeholder="Your Email" class="contact__input" required>
+      <textarea name="message" placeholder="Your Message" class="contact__input" required></textarea>
+      <input type="submit" value="Send Message" class="contact__button button">
+    </form>
+	
+<!-- Toast Container -->
+<div id="toast" style="
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-size: 16px;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+">
+  <span id="toast-message"></span>
+</div>
+
+	
+  </div>
+</section>
+
+
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Pfano Sinyela</p>
+          
+            <p class="footer__copy">&#169; All rigths reserved</p>
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+		
+<!-- Modal Script -->
+<script>
+const projectData = {
+  avitrek: {
+    title: "AviTrek App",
+    description: "AviTrek is a birdwatching app that helps users track sightings, explore birding hotspots, and record bird data easily with Mapbox integration and Firebase cloud sync.",
+    images: ["assets/img/Avitrek/1.jpg", "assets/img/Avitrek/2.jpg", "assets/img/Avitrek/3.jpg", "assets/img/Avitrek/4.jpg", "assets/img/Avitrek/5.jpg", "assets/img/Avitrek/6.jpg", "assets/img/Avitrek/7.jpg", "assets/img/Avitrek/8.jpg", "assets/img/Avitrek/9.jpg", "assets/img/Avitrek/910.jpg", "assets/img/Avitrek/911.jpg", "assets/img/Avitrek/912.jpg", "assets/img/Avitrek/913.jpg"]
+  },
+  vinyl: {
+    title: "Vinyl Collector",
+    description: "Vinyl Collector is a platform for record lovers to catalogue their collection, browse vintage records, and showcase favorite vinyl finds.",
+    images: ["assets/img/Vinyl/1.jpg", "assets/img/Vinyl/2.jpg", "assets/img/Vinyl/3.jpg", "assets/img/Vinyl/4.jpg", "assets/img/Vinyl/5.jpg", "assets/img/Vinyl/6.jpg", "assets/img/Vinyl/7.jpg", "assets/img/Vinyl/8.jpg", "assets/img/Vinyl/9.jpg", "assets/img/Vinyl/910.jpg"]
+  },
+  buzz: {
+    title: "BarberBuzz",
+    description: "BarberBuzz allows clients to browse hairstyles, book appointments, and view barber ratings. It also has an admin panel to manage barbers and services.",
+    images: ["assets/img/Barber/1.jpg", "assets/img/Barber/2.jpg", "assets/img/Barber/3.jpg", "assets/img/Barber/4.jpg", "assets/img/Barber/5.jpg", "assets/img/Barber/6.jpg", "assets/img/Barber/7.jpg", "assets/img/Barber/8.jpg", "assets/img/Barber/9.jpg","assets/img/Barber/910.jpg", "assets/img/Barber/911.jpg", "assets/img/Barber/912.jpg"]
+  }
+};
+
+const modal = document.getElementById("projectModal");
+const title = document.getElementById("projectTitle");
+const desc = document.getElementById("projectDescription");
+const imagesContainer = document.getElementById("projectImages");
+const closeBtn = document.querySelector(".close");
+
+let currentSlide = 0;
+
+// Open modal only when image is clicked
+document.querySelectorAll(".project-img").forEach(img => {
+  img.addEventListener("click", () => {
+    const key = img.getAttribute("data-project");
+    const data = projectData[key];
+
+    if (data) {
+      title.textContent = data.title;
+      desc.textContent = data.description;
+      imagesContainer.innerHTML = data.images.map((imgSrc, index) => `
+        <img src="${imgSrc}" alt="${data.title} Image" class="slider-img ${index === 0 ? 'active' : ''}">
+      `).join("");
+      currentSlide = 0;
+      modal.style.display = "block";
+    }
+  });
+});
+
+// Close modal when X is clicked
+closeBtn.onclick = () => {
+  modal.style.display = "none";
+};
+
+// Close modal if user clicks outside the modal content
+window.onclick = e => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
+// Slider Navigation Buttons
+document.getElementById("next").onclick = () => changeSlide(1);
+document.getElementById("prev").onclick = () => changeSlide(-1);
+
+function changeSlide(direction) {
+  const images = document.querySelectorAll(".slider-images img");
+  if (images.length === 0) return;
+
+  images[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + direction + images.length) % images.length;
+  images[currentSlide].classList.add("active");
+}
+
+// Swipe functionality for mobile
+let touchStartX = 0;
+let touchEndX = 0;
+const sliderContainer = document.querySelector('.slider-container');
+
+sliderContainer.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+}, false);
+
+sliderContainer.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipeGesture();
+}, false);
+
+function handleSwipeGesture() {
+  const swipeThreshold = 50; // Minimum distance to count as swipe
+  if (touchEndX < touchStartX - swipeThreshold) {
+    // Swipe left
+    changeSlide(1);
+  } else if (touchEndX > touchStartX + swipeThreshold) {
+    // Swipe right
+    changeSlide(-1);
+  }
+}
+</script>
+
+<script>
+  const titles = [
+    "Full Stack Developer",
+    "Web Designer",
+    "Software Developer",
+    "Android Developer"
+  ];
+  
+  let index = 0;
+  const titleElement = document.getElementById("dynamic-title");
+
+  setInterval(() => {
+    // Fade out
+    titleElement.style.opacity = 0;
+
+    setTimeout(() => {
+      // Change text and fade in
+      index = (index + 1) % titles.length;
+      titleElement.textContent = titles[index];
+      titleElement.style.opacity = 1;
+    }, 500); // wait for fade-out before updating
+  }, 3000); // switch every 3 seconds
+</script>
+
+
+    </body>
+</html>
