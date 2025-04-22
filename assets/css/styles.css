@@ -357,12 +357,20 @@ img {
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: inline-flex; /* Ensure the content stays inline */
+  white-space: nowrap; /* Prevent line breaks */
+  align-items: center; /* Vertically center the text and icon */
+}
+
+.btn-view-project i {
+  margin-right: 4px; /* Adjust space between icon and text */
 }
 
 .btn-view-project:hover {
   background-color: #28a745; /* Normal Green */
   transform: translateY(-2px);
 }
+
 
 
 
@@ -713,3 +721,14 @@ img {
 }
 
 
+/* Default image */
+.home__blob-img {
+    content: url('assets/img/light.png');
+}
+
+/* Change the image when the device is in dark mode */
+@media (prefers-color-scheme: dark) {
+    .home__blob-img {
+        content: url('assets/img/dark.png');
+    }
+}
