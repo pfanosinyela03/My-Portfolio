@@ -67,7 +67,7 @@ export const movingTools = [
 
 export const pfanoProfile = {
   name: 'Pfano Sinyela',
-  tagline: 'Crafting high-quality, scalable mobile, cloud, and full-stack applications.',
+  tagline: 'Building solid Android apps, scalable systems, and useful digital products.',
   cvUrl: `${import.meta.env.BASE_URL}assets/cv/Pfano-Sinyela-CV.pdf`,
   email: 'sinyelapfano@gmail.com',
   linkedin: 'https://www.linkedin.com/in/pfano-sinyela-408058286/',
@@ -76,11 +76,11 @@ export const pfanoProfile = {
   avatar: asset('avatar_pfano_sinyela_profile_enhanced.png'),
   setupImage: asset('developer_workspace_setup_1791996132660.jpg'),
   darkLandscapeSetup: asset('dark_landscape_setup_1791996890435.jpg'),
-  aboutSubtitle: 'Hi, I am Pfano Sinyela 👋',
+  aboutSubtitle: 'Hi, I’m Pfano Sinyela 👋',
   aboutText:
-    'I am a dedicated Full-Stack Developer with a strong passion for crafting high-quality, scalable applications. With proficiency in Flutter, Kotlin, Java, C#, SQL, HTML/CSS, and various other technologies, I specialize in both front-end and back-end development, enabling me to deliver seamless, efficient solutions across different platforms.',
+    'I’m a software developer focused on Android, full-stack development, and building reliable systems that solve real problems. I work across mobile apps, cloud-connected services, and clean interfaces that are easy to maintain and use.',
   aboutHighlight:
-    'Let’s connect — I’m always open to new ideas, collaborations or just chatting about tech!',
+    'Let’s connect — I’m always open to meaningful collaborations, product work, and ideas worth building.',
 };
 
 export const experiencesList: ExperienceRecord[] = [
