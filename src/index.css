@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Space Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+}
+
+/* Custom subtle light scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Smooth continuous marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Keep detailed project screenshots on the browser's highest-quality
+   resampling path and avoid the softening caused by transformed image layers. */
+.project-image {
+  image-rendering: auto;
+  image-rendering: smooth;
+  image-rendering: high-quality;
+}
+
+/* Cinematic section reveals: alternating movement, focus, lift, and stagger. */
+.scroll-reveal {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translate3d(0, 54px, 0) scale(0.975);
+  transform-origin: center top;
+  will-change: opacity, filter, transform;
+  transition:
+    opacity 800ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 850ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 950ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal[data-reveal='left'] {
+  transform: translate3d(-48px, 38px, 0) rotate(-0.55deg) scale(0.975);
+}
+
+.scroll-reveal[data-reveal='right'] {
+  transform: translate3d(48px, 38px, 0) rotate(0.55deg) scale(0.975);
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0) rotate(0) scale(1);
+}
+
+.scroll-reveal > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 650ms ease-out,
+    transform 750ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-reveal.is-visible > :nth-child(1) {
+  transition-delay: 100ms;
+}
+
+.scroll-reveal.is-visible > :nth-child(2) {
+  transition-delay: 210ms;
+}
+
+.scroll-reveal.is-visible > :nth-child(3) {
+  transition-delay: 320ms;
+}
+
+@media (max-width: 767px) {
+  .scroll-reveal,
+  .scroll-reveal[data-reveal='left'],
+  .scroll-reveal[data-reveal='right'] {
+    transform: translate3d(0, 42px, 0) scale(0.98);
+  }
+
+  .scroll-reveal.is-visible {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal,
+  .scroll-reveal.is-visible,
+  .scroll-reveal > *,
+  .scroll-reveal.is-visible > * {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    transition: none;
+  }
+}
+
+@keyframes project-showcase-enter {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.project-showcase-card {
+  animation: project-showcase-enter 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-showcase-card {
+    animation: none;
+  }
+}
