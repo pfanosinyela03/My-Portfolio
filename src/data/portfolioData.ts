@@ -1,3 +1,5 @@
+const imageAsset = (filename: string) => new URL(`../assets/images/${filename}`, import.meta.url).href;
+
 export interface Project {
   id: string;
   title: string;
@@ -90,7 +92,7 @@ export const initialProjects: Project[] = [
     year: '2026',
     client: 'Apex Industrial & Core Labs',
     impact: 'Sub-45ms execution cycle with 12k concurrent jobs',
-    image: '/src/assets/images/hero_tech_platform_1791994460029.jpg',
+    image: imageAsset('hero_tech_platform_1791994460029.jpg'),
     summary: 'A resilient event-driven execution platform coordinating distributed ETL microservices with instant live streaming observability.',
     overview: 'Aether Flow was built to solve fragmented pipeline observability across high-throughput data pipelines. It provides an authoritative real-time visual canvas, bi-directional telemetry streaming, and automated failover mitigation.',
     challenge: 'Handling bursty incoming streams of 50k events/sec while providing non-blocking reactive browser renders without memory leaks or frame drops.',
@@ -113,7 +115,7 @@ export const initialProjects: Project[] = [
     year: '2025',
     client: 'Kroma Studio Group',
     impact: 'Adopted across 18 product squads & 120+ engineers',
-    image: '/src/assets/images/showcase_creative_work_1791994464130.jpg',
+    image: imageAsset('showcase_creative_work_1791994464130.jpg'),
     summary: 'A rigorously typed design system core combining zero-runtime tokens, WCAG AA compliance, and framework-agnostic primitive bindings.',
     overview: 'Architected to streamline design-to-production handoffs and enforce accessibility invariants across multi-platform web applications.',
     challenge: 'Preventing CSS bundle bloat across enterprise sub-apps while allowing deep theming and dynamic dark/light optical adjustments.',
@@ -136,7 +138,7 @@ export const initialProjects: Project[] = [
     year: '2025',
     client: 'Veridian Capital',
     impact: '4.9/5 store rating with zero data conflict reports',
-    image: '/src/assets/images/showcase_mobile_system_1791994639161.jpg',
+    image: imageAsset('showcase_mobile_system_1791994639161.jpg'),
     summary: 'A secure financial telemetry app with biometric encryption, instant visual charts, and local-first SQLite offline sync.',
     overview: 'Built for high-net-worth portfolio management requiring uninterrupted responsiveness even during unstable wireless roaming.',
     challenge: 'Guaranteeing data reconciliation across multiple simultaneous mobile devices without state collision or race conditions.',
@@ -159,7 +161,7 @@ export const initialProjects: Project[] = [
     year: '2024',
     client: 'Maison Nordique',
     impact: '100/100 Core Web Vitals score & +62% conversion rate',
-    image: '/src/assets/images/hero_modern_agency_1791994459698.jpg',
+    image: imageAsset('hero_modern_agency_1791994459698.jpg'),
     summary: 'A luxury commerce platform combining rich editorial magazine layouts with sub-second page transitions and dynamic inventory management.',
     overview: 'Commissioned by a Scandinavian luxury home goods label to elevate their digital brand while maintaining peak conversion performance during flash drops.',
     challenge: 'Rendering high-resolution photographic media without degrading mobile scroll performance or layout shift metrics.',
@@ -182,7 +184,7 @@ export const initialProjects: Project[] = [
     year: '2024',
     client: 'Synthetix Data Systems',
     impact: 'Processes 2.4M enterprise documents with sub-60ms retrieval',
-    image: '/src/assets/images/showcase_artisan_cafe_1791994462621.jpg',
+    image: imageAsset('showcase_artisan_cafe_1791994462621.jpg'),
     summary: 'A scalable document indexing engine providing hybrid keyword and vector semantic search across multi-tenant enterprise data pools.',
     overview: 'Replaced an expensive legacy search cluster with an elastic, vector-enabled microservice architecture.',
     challenge: 'Balancing exact keyword lookup speed with deep contextual semantic relevance across unstructured PDF and markdown archives.',

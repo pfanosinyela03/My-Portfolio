@@ -1,3 +1,5 @@
+const asset = (filename: string) => new URL(`../assets/images/${filename}`, import.meta.url).href;
+
 export interface ProjectItem {
   id: string;
   key: string;
@@ -66,14 +68,14 @@ export const movingTools = [
 export const pfanoProfile = {
   name: 'Pfano Sinyela',
   tagline: 'Crafting high-quality, scalable mobile, cloud, and full-stack applications.',
-  cvUrl: '/assets/cv/Pfano-Sinyela-CV.pdf',
+  cvUrl: `${import.meta.env.BASE_URL}assets/cv/Pfano-Sinyela-CV.pdf`,
   email: 'sinyelapfano@gmail.com',
   linkedin: 'https://www.linkedin.com/in/pfano-sinyela-408058286/',
   instagram: 'https://www.instagram.com/fano.szn/',
   github: 'https://github.com/pfanosinyela03',
-  avatar: '/src/assets/images/avatar_pfano_sinyela_profile_enhanced.png',
-  setupImage: '/src/assets/images/developer_workspace_setup_1791996132660.jpg',
-  darkLandscapeSetup: '/src/assets/images/dark_landscape_setup_1791996890435.jpg',
+  avatar: asset('avatar_pfano_sinyela_profile_enhanced.png'),
+  setupImage: asset('developer_workspace_setup_1791996132660.jpg'),
+  darkLandscapeSetup: asset('dark_landscape_setup_1791996890435.jpg'),
   aboutSubtitle: 'Hi, I am Pfano Sinyela 👋',
   aboutText:
     'I am a dedicated Full-Stack Developer with a strong passion for crafting high-quality, scalable applications. With proficiency in Flutter, Kotlin, Java, C#, SQL, HTML/CSS, and various other technologies, I specialize in both front-end and back-end development, enabling me to deliver seamless, efficient solutions across different platforms.',
@@ -197,12 +199,12 @@ export const projectsList: ProjectItem[] = [
     category: 'mobile',
     categoryLabel: 'Mobile App',
     link: '#download-avitrek',
-    apkLink: '/assets/apk/AviTrek.apk',
+    apkLink: `${import.meta.env.BASE_URL}assets/apk/AviTrek.apk`,
     buttonLabel: 'Download APK',
-    image: '/src/assets/images/project_avitrek_1791995266739.jpg',
+    image: asset('project_avitrek_1791995266739.jpg'),
     galleryImages: [
-      '/src/assets/images/project_avitrek_1791995266739.jpg',
-      '/src/assets/images/avitrek_map_preview_1791996132206.jpg',
+      asset('project_avitrek_1791995266739.jpg'),
+      asset('avitrek_map_preview_1791996132206.jpg'),
     ],
     description:
       'AviTrek is a birdwatching mobile app that helps users track bird sightings, explore birding hotspots, and record bird data easily with Google Maps integration and Firebase cloud sync.',
@@ -222,11 +224,11 @@ export const projectsList: ProjectItem[] = [
     category: 'systems',
     categoryLabel: 'Systems & Platform',
     link: 'https://pfanosinyela03.github.io/BarberBuzz_Website_Deployed/',
-    apkLink: '/assets/apk/BarberBuzz.apk',
+    apkLink: `${import.meta.env.BASE_URL}assets/apk/BarberBuzz.apk`,
     buttonLabel: 'Visit Website',
-    image: '/src/assets/images/project_barberbuzz_enhanced.png',
+    image: asset('project_barberbuzz_enhanced.png'),
     galleryImages: [
-      '/src/assets/images/project_barberbuzz_enhanced.png',
+      asset('project_barberbuzz_enhanced.png'),
     ],
     description:
       'BarberBuzz Platform is an integrated appointment management and style discovery system combining a client-facing native Android booking app with a deployed web management administration dashboard.',
@@ -246,11 +248,11 @@ export const projectsList: ProjectItem[] = [
     category: 'mobile',
     categoryLabel: 'Mobile App',
     link: '#download-vinyl',
-    apkLink: '/assets/apk/VinylVault.apk',
+    apkLink: `${import.meta.env.BASE_URL}assets/apk/VinylVault.apk`,
     buttonLabel: 'Download APK',
-    image: '/src/assets/images/project_vinyl_vault_enhanced.png',
+    image: asset('project_vinyl_vault_enhanced.png'),
     galleryImages: [
-      '/src/assets/images/project_vinyl_vault_enhanced.png',
+      asset('project_vinyl_vault_enhanced.png'),
     ],
     description:
       'Vinyl Vault is a platform for record lovers to catalogue their collection, browse vintage records, track album estimated values, and showcase favorite vinyl finds with rich cover artwork.',
@@ -271,9 +273,9 @@ export const projectsList: ProjectItem[] = [
     categoryLabel: 'Web Platform',
     link: 'https://pfanosinyela03.github.io/LunarLibrary/',
     buttonLabel: 'Visit Website',
-    image: '/src/assets/images/project_lunar_library_1791995267351.jpg',
+    image: asset('project_lunar_library_1791995267351.jpg'),
     galleryImages: [
-      '/src/assets/images/project_lunar_library_1791995267351.jpg',
+      asset('project_lunar_library_1791995267351.jpg'),
     ],
     description:
       'Lunar Library allows users to explore a wide range of books, download or read books online, and keep track of their personal reading history and challenge milestones.',
@@ -293,11 +295,11 @@ export const projectsList: ProjectItem[] = [
     category: 'mobile',
     categoryLabel: 'Mobile App',
     link: '#download-survey',
-    apkLink: '/assets/apk/Survey.apk',
+    apkLink: `${import.meta.env.BASE_URL}assets/apk/Survey.apk`,
     buttonLabel: 'Download APK',
-    image: '/src/assets/images/project_tshisima_surveys.png',
+    image: asset('project_tshisima_surveys.png'),
     galleryImages: [
-      '/src/assets/images/project_tshisima_surveys.png',
+      asset('project_tshisima_surveys.png'),
     ],
     description:
       'Tshisima Surveys is an intuitive mobile application for field surveys, opinion polls, and structured questionnaires with instant aggregate analytics and clear visual reporting.',

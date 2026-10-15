@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { ArrowDown, Download, Check, Copy, ExternalLink, Terminal, ShieldCheck } from 'lucide-react';
 import { PortfolioProfile } from '../data/portfolioData';
 
+const heroImage = new URL('../assets/images/hero_tech_platform_1791994460029.jpg', import.meta.url).href;
+
 interface HeroProps {
   profile: PortfolioProfile;
   onExploreWorks: () => void;
@@ -81,7 +83,7 @@ export const Hero: React.FC<HeroProps> = ({ profile, onExploreWorks, onContactCl
               {/* Media Container */}
               <div className="aspect-[16/11] sm:aspect-[16/10] lg:aspect-[4/3] w-full overflow-hidden bg-slate-900">
                 <img
-                  src="/src/assets/images/hero_tech_platform_1791994460029.jpg"
+                  src={heroImage}
                   alt="Aether Flow Systems Architecture & Real-Time Telemetry Platform"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500"

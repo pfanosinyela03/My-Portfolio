@@ -2,6 +2,8 @@ import React from 'react';
 import { Quote, Sparkles, Check, Globe } from 'lucide-react';
 import { initialProfile, initialTestimonials } from '../data/portfolioData';
 
+const portraitImage = new URL('../assets/images/avatar_pfano_sinyela_1791994638831.jpg', import.meta.url).href;
+
 export const AboutAndProof: React.FC = () => {
   return (
     <section id="about" className="py-20 border-b border-slate-800/60 bg-slate-950/40">
@@ -13,7 +15,7 @@ export const AboutAndProof: React.FC = () => {
             <div className="relative mx-auto max-w-sm rounded-2xl overflow-hidden border border-slate-800/80 bg-slate-900 shadow-2xl">
               <div className="aspect-square w-full bg-slate-900 overflow-hidden">
                 <img
-                  src="/src/assets/images/avatar_pfano_sinyela_1791994638831.jpg"
+                  src={portraitImage}
                   alt="Pfano Sinyela Portrait"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover"
