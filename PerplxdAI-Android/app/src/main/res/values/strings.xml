@@ -1,4 +1,0 @@
-<resources>
-    <string name="app_name">Perplxd AI</string>
-    <string name="accessibility_service_description">Lets Perplxd type text you dictate into the text box you are using. It never taps Send and ignores password fields.</string>
-</resources>

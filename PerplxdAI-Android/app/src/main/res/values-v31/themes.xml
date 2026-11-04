@@ -1,9 +1,0 @@
-<resources>
-    <style name="Theme.PerplxdAI" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:statusBarColor">@color/perplxd_bg</item>
-        <item name="android:navigationBarColor">@color/perplxd_bg</item>
-        <item name="android:windowBackground">@drawable/perplxd_splash_screen</item>
-        <item name="android:windowSplashScreenBackground">#000000</item>
-        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/perplxd_app_icon</item>
-    </style>
-</resources>
